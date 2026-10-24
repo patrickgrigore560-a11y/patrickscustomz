@@ -21,7 +21,7 @@ public final class UiSounds {
     /** Normal button click (pitch 1.0 = vanilla). */
     public static void click(SoundManager sm, float pitch) {
         if (!enabled()) return;
-        sm.play(PositionedSoundInstance.master(SoundEvents.UI_BUTTON_CLICK, pitch));
+        sm.play(PositionedSoundInstance.create(SoundEvents.BLOCK_NOTE_BLOCK_CHIME, pitch));
     }
 
     /** Sidebar section chime; index picks the note. */
@@ -39,6 +39,6 @@ public final class UiSounds {
         lastTick = now;
         float pitch = (float) (0.7 + 0.9 * Math.max(0.0, Math.min(1.0, value01)));
         MinecraftClient.getInstance().getSoundManager()
-                .play(PositionedSoundInstance.master(SoundEvents.UI_BUTTON_CLICK, pitch));
+                .play(PositionedSoundInstance.create(SoundEvents.UI_BUTTON_CLICK, pitch));
     }
 }

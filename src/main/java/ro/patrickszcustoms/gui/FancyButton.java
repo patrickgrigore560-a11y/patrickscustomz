@@ -4,11 +4,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.sound.SoundManager;
-import public FancyButton(int x, int y, int w, int h,
-        net.minecraft.text.Text message,
-        ButtonWidget.PressAction onPress) {
-    super(x, y, w, h, message, onPress, DEFAULT_NARRATION_SUPPLIER);
-}
+import net.minecraft.text.Text;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.MathHelper;
 import ro.patrickszcustoms.animation.ScreenAnimator;

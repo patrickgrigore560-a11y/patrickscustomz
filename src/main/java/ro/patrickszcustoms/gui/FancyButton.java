@@ -11,7 +11,7 @@ import ro.patrickszcustoms.animation.ScreenAnimator;
 public class FancyButton extends ClickableWidget {
     public enum Mode { PLAIN, SIDEBAR, CONTENT }
 
-    private final PressAction onPress;
+   private final ButtonWidget.PressAction onPress;
     private Mode mode = Mode.PLAIN;
     private int introDelay = -1;
     private boolean selected;
@@ -21,7 +21,7 @@ public class FancyButton extends ClickableWidget {
     private float hover;
     private long last;
 
-    public FancyButton(int x, int y, int w, int h, Text message, PressAction onPress) {
+    public FancyButton(int x, int y, int w, int h, Text message, ButtonWidget.PressAction onPress) { 
         super(x, y, w, h, message);
         this.onPress = onPress;
     }

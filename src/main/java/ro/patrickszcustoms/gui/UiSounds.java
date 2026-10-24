@@ -1,5 +1,3 @@
-package ro.patrickszcustoms.gui;
-
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.client.sound.SoundManager;
@@ -27,7 +25,7 @@ public static void click(SoundManager sm, float pitch) {
         0.25f,
         pitch,
         net.minecraft.util.math.random.Random.create(),
-        0L,
+        true,
         PositionedSoundInstance.AttenuationType.NONE,
         0.0, 0.0, 0.0,
         true
@@ -38,12 +36,12 @@ public static void chime(SoundManager sm, int index) {
     if (!enabled()) return;
     float pitch = PENTATONIC[Math.floorMod(index, PENTATONIC.length)];
     sm.play(new PositionedSoundInstance(
-         SoundEvents.BLOCK_NOTE_BLOCK_CHIME.value(),
+        SoundEvents.BLOCK_NOTE_BLOCK_CHIME.value(),
         SoundCategory.MASTER,
         0.35f,
         pitch,
         net.minecraft.util.math.random.Random.create(),
-        0L,
+        true,
         PositionedSoundInstance.AttenuationType.NONE,
         0.0, 0.0, 0.0,
         true

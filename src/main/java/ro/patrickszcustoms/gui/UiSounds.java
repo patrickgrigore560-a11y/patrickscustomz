@@ -22,7 +22,7 @@ private static boolean enabled() {
 public static void click(SoundManager sm, float pitch) {
     if (!enabled()) return;
     sm.play(new PositionedSoundInstance(
-        SoundEvents.UI_BUTTON_CLICK,
+        SoundEvents.UI_BUTTON_CLICK.value(),
         SoundCategory.MASTER,
         0.25f,
         pitch,
@@ -38,7 +38,7 @@ public static void chime(SoundManager sm, int index) {
     if (!enabled()) return;
     float pitch = PENTATONIC[Math.floorMod(index, PENTATONIC.length)];
     sm.play(new PositionedSoundInstance(
-        SoundEvents.BLOCK_NOTE_BLOCK_CHIME,
+         SoundEvents.BLOCK_NOTE_BLOCK_CHIME.value(),
         SoundCategory.MASTER,
         0.35f,
         pitch,
